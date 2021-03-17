@@ -1,2 +1,3 @@
 在LeetCode-1584题中使用Kruskal最小生成树算法时需要首先对所有边按权值排序，我开始使用的是嵌套vector，每个vector元素是vector<i,j,w>，
-代表节点i，j之间的权重为w的边，调用sort函数结果超时。之后参照其他人的写法，将嵌套vector改成结构体vector，每个vector元素是
+代表节点i，j之间的权重为w的边，调用sort函数结果超时。
+之后参照其他人的写法，将嵌套vector改成结构体vector，每个vector元素是一个结构体，结构体包括起始节点i，中止节点j以及边权重w。同时重载operator <，结果是调用sort函数通过。
